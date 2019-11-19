@@ -365,31 +365,32 @@ function get_ip_of_ssh_hostname {
 unalias gc
 unalias gcm
 function gc {
-  while true;do
-    users=($GIT_USERS)
-    for ((i=1; i<=${#users[@]}; i++)) do
-      echo "$i | $users[$i]"
-    done
-    echo 'please input your number or name:'
-    read input
-    for ((i=1; i<=${#users[@]}; i++)) do
-      if [[ $input == $users[$i] ]];then
-        name=$input
-        index=$i
-        break 2
-      elif [[ "$input" =~ '^[0-9]+$' ]];then
-        if [[ $input -gt 0 && $input -le ${#users[@]} ]];then
-          name=$users[$input]
-          index=$input
-          break 2
-        fi
-      fi
-    done
-    echo 'invalid option...'
-  done
-  emails=($GIT_EMAILS)
-  (git commit --verbose $*) || return
-  (git commit --amend --author="$name <$emails[$index]>") || return
+  # while true;do
+  #   users=($GIT_USERS)
+  #   for ((i=1; i<=${#users[@]}; i++)) do
+  #     echo "$i | $users[$i]"
+  #   done
+  #   echo 'please input your number or name:'
+  #   read input
+  #   for ((i=1; i<=${#users[@]}; i++)) do
+  #     if [[ $input == $users[$i] ]];then
+  #       name=$input
+  #       index=$i
+  #       break 2
+  #     elif [[ "$input" =~ '^[0-9]+$' ]];then
+  #       if [[ $input -gt 0 && $input -le ${#users[@]} ]];then
+  #         name=$users[$input]
+  #         index=$input
+  #         break 2
+  #       fi
+  #     fi
+  #   done
+  #   echo 'invalid option...'
+  # done
+  # emails=($GIT_EMAILS)
+  # (git commit --verbose $*) || return
+  # (git commit --amend --author="$name <$emails[$index]>") || return
+  git commit
 }
 function gcm {
   (gc --message $*) || return
