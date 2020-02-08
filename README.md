@@ -1,4 +1,4 @@
-#### bash -c "\`curl -fsSL https://github.com/alen9968/dotfiles/master/install.sh \`"
+#### bash -c "\`curl -fsSL https://github.com/alen9968/dotfiles/blob/master/install.sh \`"
 
 **总是记住在拉取代码后运行`rake update`来确保插件都更新过了**
 
