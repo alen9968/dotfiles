@@ -160,26 +160,11 @@ alias k9='kill -9'
 # Gem install
 alias sgi='sudo gem install --no-ri --no-rdoc'
 
-# TODOS
-# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
-# to find the note called 'todo'
-alias todo='open nvalt://find/todo'
-
 # Forward port 80 to 3000
 alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
 
 alias rdm='rake db:migrate'
 alias rdmr='rake db:migrate:redo'
-
-# Zeus
-alias zs='zeus server'
-alias zc='zeus console'
-alias zr='zeus rspec'
-alias zrc='zeus rails c'
-alias zrs='zeus rails s'
-alias zrdbm='zeus rake db:migrate'
-alias zrdbtp='zeus rake db:test:prepare'
-alias zzz='rm .zeus.sock; pkill zeus; zeus start'
 
 # Rspec
 alias rs='rspec spec'
@@ -190,41 +175,15 @@ alias srdm='spring rake db:migrate'
 alias srdt='spring rake db:migrate'
 alias srdmt='spring rake db:migrate db:test:prepare'
 
-
-# Sprintly - https://github.com/nextbigsoundinc/Sprintly-GitHub
-alias sp='sprintly'
-# spb = sprintly branch - create a branch automatically based on the bug you're working on
-alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
-
-alias hpr='hub pull-request'
-alias grb='git recent-branches'
-
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-alias dbtp='spring rake db:test:prepare'
-alias dbm='spring rake db:migrate'
-alias dbmr='spring rake db:migrate:redo'
-alias dbmd='spring rake db:migrate:down'
-alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
 
-# emacs
-alias emacs="env LC_CTYPE=zh_CN.UTF-8 emacs"
 
-alias ds='dc exec server'
-alias drspec='dc exec sidekiq rspec'
-alias psetup='dc exec sidekiq rake parallel:setup'
-alias prspec='dc exec sidekiq rake parallel:spec'
-
-alias rs='rancher exec -it rallets-server-1'
-
-alias start_dropbox='~/.dropbox-dist/dropboxd'
-alias unzip_CN="unzip -O GB18030"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
@@ -247,14 +206,5 @@ alias ssh_copy_id='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAut
 alias chrome_proxy="google-chrome --proxy-server='http://127.0.0.1:8118'"
 alias ls_folder_size="du -sch .[!.]* * | sort -h"
 alias top_by_memory="top -o %MEM"
-alias gcaa="gia .; gcF"
-alias ror_ctags="ctags -R --languages=ruby --exclude=.git --exclude=log . \$(bundle list --paths)"
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
-alias find_large_files="sudo find / -xdev -type f -size +50M"
-alias vim_plain="vim -u NONE"
-alias edit_alias="vim $yadr_zsh/aliases.zsh $yadr_zsh/functions.zsh -p"
-alias dsrubocop='ds rubocop --require rubocop/formatter/junit_formatter \
-                       --require rubocop-performance \
-                       --format progress'
 alias docker_purge='docker stop $(docker ps -qa);docker rm $(docker ps -qa)'
-alias pzsh='USING_PROXYCHAINS=true proxychains zsh'
