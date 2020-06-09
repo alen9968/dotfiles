@@ -362,11 +362,7 @@ function dc {
 function get_ip_of_ssh_hostname {
   ssh -G $1 | awk '/^hostname / { print $2  }'
 }
-unalias gc
 unalias gcm
-function gc {
-  git commit -m
-}
 function gcm {
   (gc --message $*) || return
 }
