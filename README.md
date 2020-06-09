@@ -1,5 +1,3 @@
-#### bash -c "\`curl -fsSL https://raw.githubusercontent.com/alen9968/dotfiles/master/install.sh \`"
-
 **总是记住在拉取代码后运行`rake update`来确保插件都更新过了**
 
 **请确保已安装：`zsh`, `tmux`, `vim`, `ag`**
@@ -13,31 +11,20 @@
   * 许多zsh插件完美地基于Prezto, 且在此之上叠加了一些优质特性。
   * 一切的一切都被vim化: irb, postgres命令行等等.
 
-## 邮件列表
-
-如果你有问题或者疑问又想听听我们的建议，请加入[Google Group](https://groups.google.com/forum/#!forum/yadr-users)
-
-如果是PR或者bug汇报，请一定使用Github。
-
-## 截图
-
-![screenshot](http://i.imgur.com/3C1Ze.png)
-
 ## 安装
 
 开始先运行:
 
 ```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/rallets-network/dotfiles/master/install.sh`"
+bash -c "`curl -fsSL https://raw.githubusercontent.com/alen9968/dotfiles/master/install.sh`"
 ```
 
 **注意:** YADR会自动安装它的所有子模块。如果你需要在安装每个模块前确认一下, 使用:
 
 ```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/rallets-network/dotfiles/master/install.sh`" -s ask
+bash -c "`curl -fsSL https://raw.githubusercontent.com/alen9968/dotfiles/master/install.sh`" -s ask
 ```
 
-## 等等，还没完。这一步不能少:
 
 #### 安装 iTerm Solarized Colors
 YADR 会往iTerm里安装Solarized配色方案。进入Profiles => Colors => Load Presets，可以选择Solarized Dark。
