@@ -208,3 +208,6 @@ alias ls_folder_size="du -sch .[!.]* * | sort -h"
 alias top_by_memory="top -o %MEM"
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_purge='docker stop $(docker ps -qa);docker rm $(docker ps -qa)'
+
+## Alex custom alias
+alias aa='vim ~/.yadr/zsh/aliases.zsh'

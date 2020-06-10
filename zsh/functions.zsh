@@ -366,3 +366,7 @@ unalias gcm
 function gcm {
   (gc --message $*) || return
 }
+# function to {
+#   vim $1
+#
+# }
