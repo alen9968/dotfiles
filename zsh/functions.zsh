@@ -366,7 +366,6 @@ unalias gcm
 function gcm {
   (gc --message $*) || return
 }
-# function to {
-#   vim $1
-#
-# }
+function rar {
+  unrar x  $1
+}
