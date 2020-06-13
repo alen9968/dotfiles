@@ -211,3 +211,8 @@ alias docker_purge='docker stop $(docker ps -qa);docker rm $(docker ps -qa)'
 
 ## Alex custom alias
 alias aa='vim ~/.yadr/zsh/aliases.zsh'
+
+## npm
+alias set-npm='npm config set registry http://registry.npmjs.org/'
+alias set-cnpm='npm config set registry https://registry.npm.taobao.org/'
+

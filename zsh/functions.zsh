@@ -369,3 +369,11 @@ function gcm {
 function rar {
   unrar x  $1
 }
+function grv-alex {
+echo "old origin path:"
+git remote -v
+git remote remove origin
+git remote add origin git@github.com:alex9968/$1.git
+echo "new origin path:"
+git remote -v
+}
